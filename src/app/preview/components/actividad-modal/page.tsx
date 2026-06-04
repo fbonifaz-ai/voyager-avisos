@@ -83,9 +83,12 @@ const CSS = `
   /* Con scroll: altura máxima = 2.7 ítems → el 3ro se corta = hint */
   .am-items.scroll { max-height: 720px; }
 
-  /* Separador entre ítems */
-  .am-item-wrap + .am-item-wrap {
-    border-top: 1px solid var(--vmc-color-neutral-200);
+  /* Separador entre ítems — gap visual entre cada bloque */
+  .am-items { gap: 16px; padding: 0 16px 16px; }
+  .am-item-wrap {
+    border-radius: var(--vmc-radius-sm);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(13.33% 0% 36.08% / 0.06);
   }
 
   /* ── Bloque de ítem ── */
