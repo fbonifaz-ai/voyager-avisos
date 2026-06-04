@@ -3992,7 +3992,7 @@ function DqArc({ level, size = "md" }: DqArcProps): JSX.Element {
     md: { w: 38, h: 26 },
     lg: { w: 48, h: 32 },
   };
-  const d = dims[size];
+  const d: { w: number; h: number } = dims[size] ?? { w: 38, h: 26 };
   return (
     <svg width={d.w} height={d.h} viewBox="-4 -5 38 28" fill="none" overflow="visible" role="status" aria-label={DQ_LABEL[level]}>
       <path d="M 3 17 A 12 12 0 0 1 27 17" stroke="var(--vmc-color-vault, oklch(0.22 0.18 285))" strokeOpacity="0.14" strokeWidth="3" strokeLinecap="round" />

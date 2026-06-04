@@ -539,11 +539,11 @@ interface CloseVar {
   closeSlot: "inline" | "gradient" | "link" | "btn" | "handle";
 }
 const CLOSE_VARIANTS: CloseVar[] = [
-  { label: "I · Header inline X",    desc: "X círculo neutral 28px top-right. Sin texto. Mismo patrón AG-B / NM-I / IM-I.",      note: "Sin overflow · aria-label", agRef: "≡ AG-B · NM-I · IM-I"   },
-  { label: "II · Handle + hint",      desc: "Barra de arrastre top + hint al pie. Mismo patrón AG-C / NM-II / IM-II.",            note: "↑ Mobile-first · gesto",     agRef: "≡ AG-C · NM-II · IM-II"  },
-  { label: "III · Ghost link",        desc: '"Cerrar" como link vault al pie de la lista. Mismo patrón AG-D / NM-III / IM-III.',   note: "↑ Mínima fricción",          agRef: "≡ AG-D · NM-III · IM-III" },
-  { label: "IV · Footer 'Cerrar'",    desc: 'Franja de cierre al pie, separada de la lista. Coherente con el header de tabs.',     note: "↑ Cierre explícito · limpio",agRef: "≡ AG-E · NM-IV · IM-IV"  },
-  { label: "V · X gradient ring",     desc: "X con borde naranja→vault, espeja el card. Hover: scale + glow. Mismo patrón AG-F.", note: "↑ Máxima cohesión DS",       agRef: "≡ AG-F · NM-V · IM-V"    },
+  { label: "I · Header inline X",   closeSlot: "inline",   desc: "X círculo neutral 28px top-right. Sin texto. Mismo patrón AG-B / NM-I / IM-I.",      note: "Sin overflow · aria-label", agRef: "≡ AG-B · NM-I · IM-I"    },
+  { label: "II · Handle + hint",    closeSlot: "handle",   desc: "Barra de arrastre top + hint al pie. Mismo patrón AG-C / NM-II / IM-II.",            note: "↑ Mobile-first · gesto",     agRef: "≡ AG-C · NM-II · IM-II"   },
+  { label: "III · Ghost link",      closeSlot: "link",     desc: '"Cerrar" como link vault al pie de la lista. Mismo patrón AG-D / NM-III / IM-III.',   note: "↑ Mínima fricción",          agRef: "≡ AG-D · NM-III · IM-III"  },
+  { label: "IV · Footer 'Cerrar'",  closeSlot: "btn",      desc: 'Franja de cierre al pie, separada de la lista. Coherente con el header de tabs.',     note: "↑ Cierre explícito · limpio", agRef: "≡ AG-E · NM-IV · IM-IV"   },
+  { label: "V · X gradient ring",   closeSlot: "gradient", desc: "X con borde naranja→vault, espeja el card. Hover: scale + glow. Mismo patrón AG-F.", note: "↑ Máxima cohesión DS",        agRef: "≡ AG-F · NM-V · IM-V"     },
 ];
 
 function buildCloseVariant(v: CloseVar): JSX.Element {
