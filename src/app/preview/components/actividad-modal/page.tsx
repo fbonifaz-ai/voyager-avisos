@@ -83,13 +83,17 @@ const CSS = `
   /* Con scroll: altura máxima = 2.7 ítems → el 3ro se corta = hint */
   .am-items.scroll { max-height: 720px; }
 
-  /* Separador entre ítems — gap visual entre cada bloque */
-  .am-items { gap: 16px; padding: 0 16px 16px; }
-  .am-item-wrap {
-    border-radius: var(--vmc-radius-sm);
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgb(13.33% 0% 36.08% / 0.06);
+  /* Separador entre ítems — el fondo neutro hace visible el gap */
+  .am-items {
+    gap: 0;
+    padding: 0;
+    background: var(--vmc-color-neutral-200);
   }
+  .am-item-wrap {
+    background: var(--vmc-color-base-white);
+    margin-bottom: 12px;
+  }
+  .am-item-wrap:last-child { margin-bottom: 0; }
 
   /* ── Bloque de ítem ── */
   .am-image-wrap {
